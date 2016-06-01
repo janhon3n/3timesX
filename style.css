@@ -1,0 +1,41 @@
+body {
+	font-size:28px;
+	background-color:black;
+	text-align:center;
+	min-width:700px;
+}
+form{
+	background-color:#222;
+	width:500px;
+	padding:50px;
+	margin-left:auto;
+	margin-right:auto;
+}
+h1{
+	color:white;
+}
+
+form input{
+	font-size:28px;
+	text-align:center;
+}
+
+
+form .xInput{
+	margin:20px;
+}
+
+.submitLink{
+	color:white;
+	background-color:#555;
+	width:300px;
+	margin-left:auto;
+	margin-right:auto;
+	margin-top:20px;
+	padding:10px;
+	cursor:pointer;
+}
+.submitLink:hover{
+	background-color:#aaa;
+	color:black;
+}
