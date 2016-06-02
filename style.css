@@ -2,17 +2,14 @@ body {
 	font-size:28px;
 	background-color:black;
 	text-align:center;
-	min-width:700px;
+	min-width:1000px;
+	color:white;
+	vertical-align:middle;
 }
 form{
-	background-color:#222;
-	width:500px;
+	background-color:#111;
 	padding:50px;
-	margin-left:auto;
-	margin-right:auto;
-}
-h1{
-	color:white;
+	margin:20px;
 }
 
 form input{
@@ -20,13 +17,78 @@ form input{
 	text-align:center;
 }
 
-
 form .xInput{
-	margin:20px;
+	display:inline-block;
+	margin-top:20px;
+	font-size:60px;
+	width:20%;
+	}
+
+form #xInputs[xCount="1"] .xInput{
+	width:100%;
+}
+form #xInputs[xCount="2"] .xInput{
+	width:50%;
+}
+form #xInputs[xCount="3"] .xInput{
+	width:33%;
+}
+form #xInputs[xCount="4"] .xInput{
+	width:25%;
+}
+form #xInputs[xCount="5"] .xInput{
+	width:20%;
+}
+
+
+@media(max-width:1640px){
+	form .xInput{
+		width:25%;
+	}
+	form #xInputs[xCount="1"] .xInput{
+		width:100%;
+	}
+	form #xInputs[xCount="2"] .xInput{
+		width:50%;
+	}
+	form #xInputs[xCount="3"] .xInput{
+		width:33%;
+	}
+	form #xInputs[xCount="4"] .xInput{
+		width:25%;
+	}
+	form #xInputs[xCount="5"] .xInput{
+		width:25%;
+	}
+}
+@media(max-width:1240px){
+	form .xInput{
+		width:33%;
+	}
+	form #xInputs[xCount="1"] .xInput{
+		width:100%;
+	}
+	form #xInputs[xCount="2"] .xInput{
+		width:50%;
+	}
+	form #xInputs[xCount="3"] .xInput{
+		width:33%;
+	}
+	form #xInputs[xCount="4"] .xInput{
+		width:33%;
+	}
+	form #xInputs[xCount="5"] .xInput{
+		width:33%;
+	}
+}
+
+
+
+form .xInput input{
+	width:90%;
 }
 
 .submitLink{
-	color:white;
 	background-color:#555;
 	width:300px;
 	margin-left:auto;
@@ -38,4 +100,95 @@ form .xInput{
 .submitLink:hover{
 	background-color:#aaa;
 	color:black;
+}
+
+
+
+
+/* Showing the x's */
+#xShows {
+	font-size:50px;
+}
+.xShow{
+	display:inline-block;
+	width:20%;
+	vertical-align: middle;
+	color:black;
+}
+.xShow[activated="activated"]{
+	color:white;
+}
+#xShows[xcount="1"] .xShow{
+	width:100%;
+}
+#xShows[xcount="2"] .xShow{
+	width:50%;
+}
+#xShows[xcount="3"] .xShow{
+	width:33%;
+}
+#xShows[xcount="4"] .xShow{
+	width:25%;
+}
+#xShows[xcount="5"] .xShow{
+	width:20%;
+}
+
+@media(max-width:1640px){
+	.xShow{
+		display:inline-block;
+		width:25%;
+		vertical-align: middle;
+	}
+	#xShows[xcount="1"] .xShow{
+		width:100%;
+	}
+	#xShows[xcount="2"] .xShow{
+		width:50%;
+	}
+	#xShows[xcount="3"] .xShow{
+		width:33%;
+	}
+	#xShows[xcount="4"] .xShow{
+		width:25%;
+	}
+	#xShows[xcount="5"] .xShow{
+		width:25%;
+	}
+}
+
+@media(max-width:1240px){
+	.xShow{
+		display:inline-block;
+		width:33%;
+		vertical-align: middle;
+	}
+	#xShows[xcount="1"] .xShow{
+		width:100%;
+	}
+	#xShows[xcount="2"] .xShow{
+		width:50%;
+	}
+	#xShows[xcount="3"] .xShow{
+		width:33%;
+	}
+	#xShows[xcount="4"] .xShow{
+		width:33%;
+	}
+	#xShows[xcount="5"] .xShow{
+		width:33%;
+	}
+}
+
+.xShow svg{
+	width:100%;
+	height:auto;
+}
+
+.xShow[activated="activated"] svg line{
+	stroke:red;
+
+}
+.xShow svg line{
+	stroke-width:10px;
 }
