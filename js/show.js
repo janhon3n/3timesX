@@ -27,7 +27,9 @@ $(document).ready(function(){
 	
 	function activateX(index){
 		$("#xShows .xShow:nth-child("+(index)+")").attr("activated", "activated");
-		playSoundFx();
+		if(typeof(playSoundFx) == "function"){
+			playSoundFx();
+		}
 	}
 	function deactivateX(index){
 		$("#xShows .xShow:nth-child("+(index)+")").attr("activated", "no");
@@ -39,21 +41,7 @@ $(document).ready(function(){
 		}
 	}
 	
-	var soundfx = [];
-	soundfx.push(new Audio("soundfx.mp3"));
-	soundfx.push(new Audio("soundfx.mp3"));
-	soundfx.push(new Audio("soundfx.mp3"));
-	var nextSoundfx = 0;
-	function playSoundFx(){
-		soundfx[nextSoundfx].pause();
-		soundfx[nextSoundfx].currentTime = 1.1;
-		soundfx[nextSoundfx].play();
-		
-		nextSoundfx += 1;
-		if(nextSoundfx >= soundfx.length){
-			nextSoundfx = 0;
-		}
-	}
+
 	
 	var keyboardCodesStart = 49;
 	$(document).keypress(function(e){
